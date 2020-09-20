@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}新規登録画面{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="judge">学生 or 教授</label>
+    <input type="radio" name="judge" id="judge" value="学生" required>学生
+    <input type="radio" name="judge" id="judge" value="教授" required>教授
+    <label for="username">名前</label>
+    <input name="username" id="username" required>
+    <label for="password">パスワード</label>
+    <input type="password" name="password" id="password" required>
+    <label for="university">大学名</label>
+    <input name="university" id="university" required>
+    <label for="course">学科</label>
+    <input name="course" id="course" required>
+    <label for="major">專攻</label>
+    <input name="major" id="major" required>
+    <label for="grade">学年</label>
+    <input name="grade" id="grade" required>
+    <label for="birthday">生年月日</label>
+    <input type="date" name="birthday"  id="birthday" max="9999-12-31">
+    <label for="mail">メールアドレス</label>
+    <input name="mail" id="mail" required>
+    <label for="biography">自己紹介文</label>
+    <textarea name="biography" id="biography" required></textarea>
+
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}

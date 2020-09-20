@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Post{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="lab">研究室名</label>
+    <input name="lab" id="lab" value="{{ request.form['lab'] }}" required>
+    <label for="university">大学名</label>
+    <input name="university" id="university" value="{{ request.form['university'] }}" required>
+    <label for="teacher">教授</label>
+    <input name="teacher" id="teacher" value="{{ request.form['teacher'] }}" required>
+    <label for="major">専攻</label>
+    <input name="major" id="major" value="{{ request.form['major'] }}" required>
+    <label for="course">学科</label>
+    <input name="course" id="course" value="{{ request.form['course'] }}" required>
+    <label for="area">地域</label>
+    <input name="arear" id="area" value="{{ request.form['area'] }}" required>
+    <label for="body">研究室紹介文</label>
+    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+    <label for="title">Title</label>
+    <input name="title" id="title" value="{{ request.form['title'] }}" required>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}新規登録画面{% endblock %}</h1>
+{% endblock %} {% block content %}
+<form method="post">
+
+    <label for="judge">学生 or 教授 </label>
+    <p>
+        <input type="radio" name="judge" value="0" required> 学生
+        <input type="radio" name="judge" value="1" required> 教授
+    </p>
+    <div class="form-group">
+        <label for="username">名前</label>
+        <input class="form-control" name="username" id="username" placeholder="山田 太郎" required>
+    </div>
+    <div class="form-group">
+        <label for="password">パスワード *半角英大文字・半角英小文字・半角数字いれずれも必ず含む8文字以上</label>
+        <input class="form-control" type="password" name="password" id="password" style="ime-mode:disabled" placeholder="Abcde12345" pattern="(?=.?[a-z])(?=.?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,}" title="半角英大文字・半角英小文字・半角数字いれずれも必ず含む8文字以上" required>
+    </div>
+    <div class="form-group">
+        <label for="university">大学名</label>
+        <input class="form-control" name="university" id="university" placeholder="〇〇大学" required>
+    </div>    
+    <div class="form-group">
+        <label for="course">学科</label>
+        <input class="form-control" name="course" id="course" placeholder="〇〇学科" required>
+    </div>    
+    <div class="form-group">
+        <label for="major">專攻</label>
+        <input class="form-control" name="major" id="major" placeholder="〇〇専攻" required>
+    </div>
+    <label for="course">学年</label>
+    <p>
+        <input type="radio" name="grade" value="1" required> 学部1年
+        <input type="radio" name="grade" value="2" required> 学部2年
+        <input type="radio" name="grade" value="3" required> 学部3年
+        <input type="radio" name="grade" value="4" required> 学部4年
+    </p>
+    <p>
+        <input type="radio" name="grade" value="5" required> 修士1年
+        <input type="radio" name="grade" value="6" required> 修士2年
+    </p>
+    <p>
+        <input type="radio" name="grade" value="7" required> 博士1年
+        <input type="radio" name="grade" value="8" required> 博士2年
+        <input type="radio" name="grade" value="9" required> 博士3年
+    </p>
+    <p>
+        <input type="radio" name="grade" value="0" required> その他
+    </p>
+    <div class="form-group">
+        <label for="birthday">生年月日</label>
+        <input class="form-control" type="date" name="birthday" id="birthday" max="9999-12-31">
+    </div>
+    <div class="form-group">
+        <label for="mail">メールアドレス</label>
+        <input class="form-control" type="email" name="mail" id="mail" placeholder="example@example.com" required>
+    </div>    
+    <div class="form-group">
+        <label for="biography">自己紹介文</label>
+        <textarea class="form-control" name="biography" id="biography" placeholder="自分のアピールポイントなど自己紹介文を記入してください" required></textarea>
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="登録する">
+</form>
+{% endblock %}

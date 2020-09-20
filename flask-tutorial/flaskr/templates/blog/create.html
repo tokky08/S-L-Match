@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}研究室の紹介ページを作る{% endblock %}</h1>
+{% endblock %} {% block content %}
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="lab">研究室名</label>
+        <input class="form-control" name="lab" id="lab" value="{{ request.form['lab'] }}" placeholder="〇〇研究室" required>
+    </div>        
+    <div class="form-group">
+        <label for="university">大学名</label>
+        <input class="form-control" name="university" id="university" value="{{ request.form['university'] }}" placeholder="〇〇大学" required>
+    </div>        
+    <div class="form-group">
+        <label for="teacher">教授</label>
+        <input class="form-control" name="teacher" id="teacher" value="{{ request.form['teacher'] }}" placeholder="〇〇教授" required>
+    </div>        
+    <div class="form-group">
+        <label for="major">専攻</label>
+        <input class="form-control" name="major" id="major" value="{{ request.form['major'] }}" placeholder="〇〇専攻" required>
+    </div>        
+    <div class="form-group">
+        <label for="course">学科</label>
+        <input class="form-control" name="course" id="course" value="{{ request.form['course'] }}" placeholder="〇〇学科" required>
+    </div>        
+    <div class="form-group">
+        <label for="area">地域</label>
+        <input class="form-control" name="area" id="area" value="{{ request.form['area'] }}" placeholder="〇〇都道府県" required>
+    </div>        
+    <div class="form-group">
+        <label for="body">研究室紹介文</label>
+        <textarea class="form-control" name="body" placeholder="研究室をアピールする紹介文">{{ request.form['body'] }}</textarea>
+    </div>        
+    <div class="form-group">
+        <label for="title">動画のタイトル</label>
+        <input class="form-control" name="title" id="title" value="{{ request.form['title'] }}" placeholder="〇〇タイトル" required>
+    </div>            
+    
+    <label for="user_file">研究室紹介動画</label>
+    <input type="file" name="user_file" value="{{ request.form['user_file'] }}">
+      
+    <input type="submit" class="btn btn-primary" value="登録">
+</form>
+{% endblock %}

@@ -1,0 +1,65 @@
+-- DROP TABLE IF EXISTS user;
+-- DROP TABLE IF EXISTS post;
+
+
+-- -- CREATE TABLE user (
+-- --   id INTEGER PRIMARY KEY AUTOINCREMENT,
+-- --   password TEXT NOT NULL,
+-- --   username TEXT UNIQUE NOT NULL,
+-- --   -- university TEXT,
+-- --   -- course TEXT,
+-- --   -- major TEXT,
+-- --   -- grade INTEGER,
+-- --   -- birthday TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+-- --   -- mail TEXT UNIQUE NOT NULL,
+-- --   -- biography TEXT,
+-- --   -- judge TEXT NOT NULL,
+-- -- );
+
+-- -- CREATE TABLE post (
+-- --   id INTEGER PRIMARY KEY AUTOINCREMENT,
+-- --   -- password TEXT NOT NULL,
+-- --   -- lab TEXT NOT NULL,
+-- --   -- university TEXT NOT NULL,
+-- --   -- course TEXT ,
+-- --   -- video TEXT,
+-- --   -- major TEXT,
+-- --   -- area TEXT,
+-- --   -- teacher TEXT,
+-- --   author_id INTEGER NOT NULL,
+-- --   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+-- --   title TEXT NOT NULL,
+-- --   body TEXT NOT NULL,
+-- --   FOREIGN KEY (author_id) REFERENCES user (id)
+-- -- );
+
+-- CREATE TABLE user (
+--   id INTEGER PRIMARY KEY AUTOINCREMENT,
+--   password TEXT NOT NULL,
+--   username TEXT UNIQUE NOT NULL,
+--   university TEXT,
+--   course TEXT,
+--   major TEXT,
+--   grade INTEGER,
+--   birthday TEXT,
+--   mail TEXT UNIQUE NOT NULL,
+--   biography TEXT,
+--   judge TEXT NOT NULL
+-- );
+
+-- CREATE TABLE post (
+--   id INTEGER PRIMARY KEY AUTOINCREMENT,
+--   password TEXT NOT NULL,
+--   lab TEXT NOT NULL,
+--   university TEXT NOT NULL,
+--   course TEXT ,
+--   video TEXT,
+--   major TEXT,
+--   area TEXT,
+--   teacher TEXT,
+--   author_id INTEGER NOT NULL,
+--   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+--   title TEXT NOT NULL,
+--   body TEXT NOT NULL,
+--   FOREIGN KEY (author_id) REFERENCES user (id)
+-- );

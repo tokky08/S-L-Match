@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}お問い合わせフォーム{% endblock %}</h1>
+{% endblock %} {% block content %}
+
+<form method="post">
+    <label for="title">件名</label>
+    <input name="title" id="title" required>
+    <label for="body">お問い合わせ内容</label>
+    <textarea name="body"></textarea>
+    <input type="submit" value="送信" class="btn btn-primary">
+</form>
+<hr>
+
+{% endblock %}

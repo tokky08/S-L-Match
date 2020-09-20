@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Abel");
+#body {
+  margin: 0 auto; }
+  #body .login_name {
+    display: flex; }
+
+.lab_link:hover {
+  text-decoration: none;
+  opacity: 0.6; }
+
+.lab_text {
+  margin: auto 0; }
+
+.video {
+  width: 50%; }
+  .video video {
+    width: 100%; }
+
+.detail_video {
+  margin: 5px auto;
+  width: 95%; }
+  .detail_video video {
+    width: 100%; }
+
+.title_video {
+  font-size: 50%; }
+
+/*# sourceMappingURL=style.css.map */

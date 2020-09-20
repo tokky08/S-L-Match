@@ -1,0 +1,26 @@
+#body{
+    margin: 0 auto;
+    .login_name{
+        display: flex;
+    }
+}
+
+.lab_link:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+
+.lab_text{
+    margin: auto 0;
+}
+.video{
+    width: 50%;
+    video{
+        width: 100%;
+    }
+}
+
+// .video{
+//     width: 100%;
+// }

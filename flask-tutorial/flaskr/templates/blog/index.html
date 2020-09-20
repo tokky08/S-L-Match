@@ -1,0 +1,113 @@
+{% extends 'base2.html' %}
+<!-- ヘッダー -->
+{% block header %}
+<h1>{% block title %}トップページ{% endblock %}</h1> 
+<!-- ログイン -->
+
+{% if g.user['judge'] %}
+<!--<span>{{ g.user["username"] }}</span>-->
+<p><a class="action btn btn-primary" role="button" href="{{ url_for('blog.create') }}">部屋を作る</a></p>
+{% endif %}
+{% endblock %}
+<!-- ヘッダー -->
+
+<!-- コンテンツ -->
+{% block content %}
+
+<!-- メイン画像 -->
+<div id="mainBanner" class="mainImg">
+    <div class="inner">
+        <img class="img-right" src="{{url_for('static', filename='img/DL.jpeg') }}" width="500" alt="">
+        <div class="slogan">
+            <h2>S-L Match</h2>
+            <h3>動画を主体とした研究室と学生のマッチングサービスです。</h3>
+        </div>
+    </div>
+</div>
+<!-- / メイン画像 -->
+
+
+<section class="gridWrapper" id="sub">
+    <div class="mb-5">
+        <article id="gaiyou" class="grid">
+            <h3>サービス概要</h3>
+            <h1>　学生と研究室をつなげるプラットフォーム</h1>
+            <p>研究室選択... 学生としては難しいもの。また、研究室としてはなるべく多くの学生や企業に、研究室ならではの良さや雰囲気を伝えたい。</p>
+            <p>このプラットフォームでは、そんな学生や研究室の願いを叶えます。</p>
+            <p>研究室の情報を集めやすく、また映像を主体とすることで研究室の雰囲気をより伝わりやすくするといった工夫をしています。</p>
+            <!-- <p class="readmore"><a href="subpage.html">&raquo; 詳細を確認する</a></p> -->
+        </article>
+    </div>
+
+    <article id="shibori" class="grid">
+        <h3>研究室を検索する</h3>
+        <form method="post" enctype="multipart/form-data" class="formset">
+            <div class="form-group">
+                <label for="lab">研究室名で探す</label>
+                <input class="form-control" name="lab" id="lab" value="{{ request.form['lab'] }}" placeholder="〇〇研究室">
+            </div>    
+            <div class="form-group">
+                <label for="university">大学名で探す</label>
+                <input class="form-control" name="university" id="university" value="{{ request.form['university'] }}" placeholder="〇〇大学">
+            </div>    
+            <div class="form-group">
+                <label for="teacher">教授で探す</label>
+                <input class="form-control" name="teacher" id="teacher" value="{{ request.form['teacher'] }}" placeholder="〇〇教授">
+            </div>    
+            <div class="form-group">
+                <label for="major">専攻で探す</label>
+                <input class="form-control" name="major" id="major" value="{{ request.form['major'] }}"  placeholder="〇〇専攻">
+            </div>    
+            <div class="form-group">
+                <label for="course">学科で探す</label>
+                <input class="form-control" name="course" id="course" value="{{ request.form['course'] }}" placeholder="〇〇学科">
+            </div>    
+            <div class="form-group">
+                <label for="area">地域で探す</label>
+                <input class="form-control" name="area" id="area" value="{{ request.form['area'] }}" placeholder="〇〇都道府県">
+            </div>
+            <input type="submit" class="btn btn-primary" value="絞り込み">
+            
+        </form>
+    </article>
+
+</section>
+
+</div>
+<article id="lab_link" class="grid">
+    <h3>研究室一覧</h3>
+    {% if num %}
+    <p class="mb-3">{{ num }}件の研究室を表示中</p>
+    {% endif %}
+    {% for post in posts %}
+    <a href="{{ url_for('blog.detail', post_id=post['id']) }}" class="lab_link">
+        <div class="card mb-5 ml-5 mr-5">
+          <div class="card-body">
+            <div class="d-flex justify-content-around">
+                <div class="lab_text">
+                    <h4 class="card-title">研究室名：{{ post['lab'] }}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">先生：{{ post['teacher'] }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">大学：{{ post['university'] }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">専攻：{{ post['major'] }}</h6>
+                    <p class="card-text">{{ post['body'] }}</p>
+                </div>
+                <div class="video">
+                    <!-- 動画 -->
+                    <video loop autoplay muted>
+                    
+                        <source src="{{ post['video_url'] }}"
+                                type="video/mp4">
+                    
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                <!-- 動画 -->
+                </div>
+            </div>
+          </div>
+        </div>
+    </a>
+    {% endfor %}
+</article>
+<!-- 繰り返し -->
+{% endblock %}
+<!-- コンテンツ -->

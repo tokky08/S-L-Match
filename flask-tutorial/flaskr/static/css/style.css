@@ -1,0 +1,722 @@
+@charset "utf-8";
+
+/* =Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+:focus {
+    outline: 0;
+}
+
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: left;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+}
+
+blockquote,
+q {
+    quotes: "" "";
+}
+
+a img {
+    border: 0;
+}
+
+figure {
+    margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+
+
+
+h1 {
+    font-family: serif;
+    color: #377ba8;
+    margin: 1rem 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+
+/**************************
+/* ナビゲーション
+**************************/
+
+nav {
+    background: lightgray;
+    display: flex !important;
+    justify-content: space-between;
+    /*align-items: center;*/
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px 5px 0 0;
+}
+
+nav h1 {
+    font-size: 20px;
+    flex: auto;
+    margin: 0;
+    padding-left: 50px;
+}
+
+nav h1 a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a,
+nav ul li span,
+header .action {
+    display: block;
+    padding: 0.5rem;
+}
+
+
+/* nav ul li a,
+nav ul li span, */
+
+
+/**************************
+/* リストナビ
+**************************/
+
+ul#listnav {
+    clear: both;
+    overflow: hidden;
+    margin: 0 auto;
+    background: lightslategrey;
+    border-radius: 5px 5px 0 0;
+}
+
+* html ul#listnav {
+    height: 1%;
+}
+
+ul#listnav li {
+    float: left;
+    text-align: center;
+}
+
+ul#listnav a {
+    width: 192px;
+    font-size: 12px;
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    line-height: 1.2;
+    border-left: 1px solid gray;
+    text-decoration: none;
+}
+
+/*ul#listnav a span {*/
+/*    font-size: 9px;*/
+/*}*/
+
+ul#listnav li:first-child a {
+    border: 0;
+}
+
+ul#listnav li:last-child a {
+    width: 192px;
+}
+
+ul#listnav li.active a,
+ul#listnav a:hover {
+    background: #2871d7;
+}
+
+ul#listnav a:active,
+a:focus {
+    outline: 0;
+}
+
+
+/****************/
+
+
+/**************************
+/* メイン画像（トップページ+サブページ）
+**************************/
+
+#mainBanner {
+    clear: both;
+    line-height: 0;
+    /* background: #134b88; */
+}
+
+#mainBanner .inner {
+    position: relative;
+}
+
+.img-right {
+    display: block;
+    margin-right: 0px;
+    margin-left: auto;
+    /* max-width: 100%;
+    background: #134b88; */
+}
+
+.img-left {
+    margin-left: 10px;
+    margin-right: auto;
+    /* max-width: 100%;
+    background: #134b88; */
+}
+
+
+/* #mainBanner img {
+    max-width: 100%;
+    height: auto;
+} */
+
+.movie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* background: #2871d7; */
+    /* width: 8em */
+}
+
+.slogan {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    line-height: 1.4;
+    z-index: 100;
+}
+
+.slogan h2 {
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.slogan h3 {
+    font-size: 14px;
+}
+
+
+/**************/
+
+header .action {
+    display: block;
+    padding: 0.5rem;
+}
+
+.content {
+    padding: 0 1rem 1rem;
+}
+
+.content>header {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 0;
+}
+
+
+.content > header h1 {
+    flex: auto; 
+    margin: 1rem 0 0.25rem 0; 
+    font-size: 20px;
+} 
+
+.login_name{
+    flex: auto;
+    margin: 10px;
+    color: blue;
+}
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #377ba8;
+}
+
+.post>header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85em;
+}
+
+.post>header>div:first-of-type {
+    flex: auto;
+}
+
+.post>header h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.post .about {
+    color: slategray;
+    font-style: italic;
+}
+
+.post .body {
+    white-space: pre-line;
+}
+
+.content:last-child {
+    margin-bottom: 0;
+}
+
+.content form {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.content label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.content input,
+.content textarea {
+    margin-bottom: 1em;
+}
+
+.content textarea {
+    min-height: 12em;
+    resize: vertical;
+}
+
+input.danger {
+    color: #cc2f2e;
+}
+
+input[type=submit] {
+    align-self: start;
+    min-width: 10em;
+}
+
+h2 {
+    font-family: serif;
+    color: green;
+    margin: 1rem 0;
+}
+
+.top h2 {
+    align-items: flex-end;
+    color: aqua;
+}
+
+.inner {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*************
+/* ヘッダー
+*************/
+
+h1 {
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+#header {
+    overflow: hidden;
+    padding: 5px 0 0;
+    color: #fff;
+    background: lightslategray;
+}
+
+* html #header {
+    height: 1%;
+}
+
+
+/*************
+/* ロゴ
+*************/
+
+#header .logo {
+    float: left;
+    padding: 20px 0;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.logo span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.info {
+    float: right;
+    padding: 20px 0;
+}
+
+.tel strong {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*register*/
+
+input#judge {
+    color: red
+}
+
+
+/*************
+/* フッター
+*************/
+
+#footer .inner {
+    clear: both;
+    /*margin-bottom: 20px;*/
+    padding: 20px 0;
+    overflow: hidden;
+    background: lightslategray;
+    border-radius: 0 0 10px 10px;
+}
+
+* html #footer {
+    height: 1%;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer .copyright {
+    font-size: 11px;
+}
+
+
+/**************************
+/* グリッド
+**************************/
+
+.gridWrapper {
+    padding-bottom: 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+* html .gridWrapper {
+    height: 1%;
+}
+
+.grid {
+    /* float: left; */
+    padding-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px 5px 0 0;
+    margin: 10px auto;
+}
+
+.grid h1 {
+    padding: 5px;
+    font-size: 20px;
+    color: #377ba8;;
+    text-align: center;
+}
+
+.grid h3 {
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    background: lightslategray;
+}
+
+.grid p {
+    padding: 10px 10px 0;
+}
+
+.grid ul {
+    margin: 5px 10px 3px;
+}
+
+.grid li {
+    padding: 5px 0 4px;
+    border-bottom: 1px solid #ccc;
+}
+
+.grid li:first-child {
+    border-top: 0;
+}
+
+.grid li:last-child {
+    border-bottom: 0;
+}
+
+.gridWrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* フッター内のグリッド(3カラム) */
+
+#footer .grid {
+    color: #fff;
+    border: 0;
+    background: transparent;
+}
+
+#footer .col3 ul {
+    margin: 0 0 10px 5px;
+}
+
+#footer .col3 li {
+    padding: 0 7px 0 5px;
+    margin-bottom: 3px;
+    list-style: none;
+    border-bottom: 0;
+    display: inline-block;
+    border: 0;
+    border-right: 1px solid #fff;
+}
+
+
+/*************
+メイン コンテンツ
+*************/
+
+section.content {
+    margin-bottom: 20px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+* html section.content {
+    height: 1%;
+}
+
+section.content p {
+    margin-bottom: 5px;
+}
+
+h3.heading {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #134091;
+    border-radius: 4px;
+}
+
+.alignleft {
+    float: left;
+    clear: left;
+    margin: 3px 10px 10px 1px;
+}
+
+.alignright {
+    float: right;
+    clear: right;
+    margin: 3px 1px 10px 10px;
+}
+
+img.frame,
+#gallery img {
+    border: 1px solid #333;
+}
+
+#gallery .gridWrapper {
+    padding: 0;
+}
+
+#gallery .grid {
+    border: 0;
+}
+
+
+/*************
+テーブル
+*************/
+
+table.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px auto;
+}
+
+table.table th,
+table.table td {
+    padding: 5px;
+    border: 1px solid #2871d7;
+}
+
+table.table tr:first-child th,
+table.table tr:first-child td {
+    border-top: #2871d7 4px solid
+}
+
+table.table th {
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: #fff;
+    background: #134091;
+}
+
+.formset{
+    padding: 20px 50px;
+    width: 600px;
+}
+
+.Lab{
+    padding-bottom: 20px;
+}
+.Lab h1{
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+.Lab h2{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.Lab p{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+.Labinfo{
+    padding-bottom: 20px;
+}
+.Labinfo h1{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.Labinfo p{
+    font-size: 20px;
+    padding-bottom: 15px;
+}

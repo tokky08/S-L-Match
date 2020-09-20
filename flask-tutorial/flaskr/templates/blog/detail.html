@@ -1,0 +1,85 @@
+{% extends 'base2.html' %}
+<!-- ヘッダー -->
+{% block header %}
+<meta charset="utf-8">
+<!--<h1>{{posts['university']}}の{{posts['lab']}} 紹介</h1>-->
+{% endblock %}
+
+<!-- コンテンツ -->
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">{{posts['lab']}}</h1>
+    <p class="lead">
+        {{posts['body']}}
+    </p>
+  </div>
+</div>
+<!-- 動画 -->
+
+<div class="detail_video">
+    <video controls muted>
+    
+        <source src="{{ posts['video_url'] }}"
+                type="video/mp4">
+    
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+    <!-- 動画 -->
+</div>
+
+<article class="Lab">
+
+<div class="title_video">
+    <h1 class="title_video">{{posts['title']}}</h1>
+</div>
+<p class="lead">動画アップロード日：{{ posts['created'].strftime('%Y-%m-%d') }}</p>
+
+<!--<h2>動画紹介コメント</h2>-->
+<!--<p>body:　{{posts['body']}}</p>-->
+<!--</article>-->
+
+<!--<article class="Labinfo">-->
+<!--<h1>研究室詳細</h1>-->
+<!--<p>university:　{{posts['university']}}</p>-->
+<!--<p>course:　{{posts['course']}}</p>-->
+<!--<p>major:　{{posts['major']}}</p>-->
+<!--<p>area:　{{posts['area']}}</p>-->
+
+</article>
+
+
+<!--<div class="jumbotron jumbotron-fluid">-->
+<!--  <div class="container">-->
+<!--    <h1 class="display-3">{{posts['lab']}}</h1>-->
+<!--    <p class="lead">-->
+<!--        {{posts['body']}}-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="card">
+  <div class="card-header">
+    研究室詳細
+  </div>
+  <div class="card-body">
+    <h4 class="card-title"></h4>
+    <p class="card-text">大学：　{{posts['university']}}</p>
+    <p class="card-text">学科：　{{posts['course']}}</p>
+    <p class="card-text">専攻：　{{posts['major']}}</p>
+    <p class="card-text">地域：　{{posts['area']}}</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+<!-- コンテンツ終わり -->
