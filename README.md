@@ -7,3 +7,6 @@
 ## S-L Matchとは？
 
 動画を主体とした学生と研究室を繋げるマッチングサービスです。
+
+![ダウンロード](https://user-images.githubusercontent.com/53991600/99144980-244b1f00-26ae-11eb-8237-fa21355734db.jpeg)
+
