@@ -10,3 +10,16 @@
 
 ![ダウンロード](https://user-images.githubusercontent.com/53991600/99144980-244b1f00-26ae-11eb-8237-fa21355734db.jpeg)
 
+
+## 使用ツール
+- Python
+- Flask
+- HTML 
+- CSS
+- Sass
+- AWS
+- EC2
+- RDS
+- S3
+- Load Balancer
+
